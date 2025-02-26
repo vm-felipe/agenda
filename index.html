@@ -10,13 +10,23 @@
     
         
         <div class="calendar-container">
-            <!-- Google Calendar Appointment Scheduling begin -->
-            <iframe 
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3RPznP2bTmlg7u04xFQ0tNkKLHvRkS1JefVNfn-Zat_yGaHzzeDFidaV0XKSl6TuXsSZ9rWqkf?gv=true" 
-                frameborder="0"
-                class="agenda-iframe">
-            </iframe>
-            <!-- end Google Calendar Appointment Scheduling -->
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+        (function() {
+          var target = document.currentScript;
+          window.addEventListener('load', function() {
+            calendar.schedulingButton.load({
+              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3RPznP2bTmlg7u04xFQ0tNkKLHvRkS1JefVNfn-Zat_yGaHzzeDFidaV0XKSl6TuXsSZ9rWqkf?gv=true',
+              color: '#039BE5',
+              label: 'Agendar um compromisso',
+              target,
+            });
+          });
+        })();
+        </script>
+        <!-- end Google Calendar Appointment Scheduling -->
         </div>
     
 </body>
